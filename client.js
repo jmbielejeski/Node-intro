@@ -1,27 +1,32 @@
 // No jQuery in Node
 // can only run one file at a time in node
 // running servers with node
+// keep require statements at top of file
 
 //Pull data from another file
-let cullenites = require('./cullenites.js');
+let cullenites = require('./cullenites');
+console.log('cullenites', cullenites);
 
-for (let student of cullenites) {
-  console.log(`Welcome to node week, ${student}`);
-}
+let favoriteNumber = require('./myFavoriteNumber');
+console.log('my favorite number is', favoriteNumber);
 
-let age = 29;
-if (age > 23) {
-  console.log('you are an old man');
-}
+// for (let student of cullenites) {
+//   console.log(`Welcome to node week, ${student}`);
+// }
 
-function birthday() {
-  age++;
-  return age;
-}
+// let age = 29;
+// if (age > 23) {
+//   console.log('you are an old man');
+// }
 
-console.log(`Happy birthday to you! You are, ${birthday()}`);
-console.log(`Happy birthday to you! You are, ${birthday()}`);
-console.log(`Happy birthday to you! You are, ${birthday()}`);
+// function birthday() {
+//   age++;
+//   return age;
+// }
+
+// console.log(`Happy birthday to you! You are, ${birthday()}`);
+// console.log(`Happy birthday to you! You are, ${birthday()}`);
+// console.log(`Happy birthday to you! You are, ${birthday()}`);
 
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (1 + max - min) + min);
@@ -40,9 +45,9 @@ function headsOrTails() {
   }
 }
 
-console.log(headsOrTails());
-console.log(headsOrTails());
-console.log(headsOrTails());
-console.log(headsOrTails());
-console.log(headsOrTails());
-console.log(headsOrTails());
+// console.log(headsOrTails());
+// console.log(headsOrTails());
+// console.log(headsOrTails());
+// console.log(headsOrTails());
+// console.log(headsOrTails());
+// console.log(headsOrTails());
